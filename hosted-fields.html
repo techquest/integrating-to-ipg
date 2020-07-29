@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom WebPay Hosted Field</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body onload="showPaymentPage()">
+    <div class="payment-form-container" style="display: none">
+      <div class="notification-box">
+        <div class="content"></div>
+      </div>
+
+      <div class="form-page card-details show">
+        <div class="form-text" style="text-align: center;">PAY WITH CARD</div>
+        <div class="payment-body">
+          <div class="form-group">
+            <div class="form-control c1">
+              <div id="cardNumber-container" class="payment-field"></div>
+            </div>
+            <div class="form-control c2">
+              <div id="expirationDate-container" class="payment-field"></div>
+            </div>
+
+            <div class="form-control c3">
+              <div id="cvv-container" class="payment-field"></div>
+            </div>
+          </div>
+
+          <div class="button-container">
+            <button id="pay-button" class="purple">
+              Pay (<span id="amount-placeholder" class="amount"></span>)
+              <span id="payment-loading"><i class="fa fa-spinner"></i></span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-page pin">
+        <div class="back-control" id="pin-back-button">
+          <label style="color: black; font-family: monospace;"><< Back</label>
+        </div>
+
+        <div class="form-text" style="text-align: center;">
+          Please provide your PIN
+        </div>
+        <div class="payment-body">
+          <div class="form-control">
+            <div id="pin-container" class="payment-field"></div>
+          </div>
+
+          <div class="button-container">
+            <button id="continue-button" class="purple">
+              Continue
+              <span id="continue-loading"><i class="fa fa-spinner"></i></span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-page otp">
+        <div class="back-control" id="otp-back-button">
+          <label style="color: black; font-family: monospace;"><< Back</label>
+        </div>
+
+        <div class="form-text" style="text-align: center;">
+          Please input the OTP sent to your mobile number
+        </div>
+
+        <div class="payment-body">
+          <div class="form-control">
+            <div id="otp-container" class="payment-field"></div>
+          </div>
+
+          <div class="button-container">
+            <button id="validate-button" class="purple">
+              Validate
+              <span id="validate-loading"><i class="fa fa-spinner"></i></span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-page cardinal">
+        <div class="cardinal-container"></div>
+      </div>
+    </div>
+
+    <script src="https://nwp.qa.interswitchng.com/sdk.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

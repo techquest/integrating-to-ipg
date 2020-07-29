@@ -19,8 +19,8 @@
     <script type="text/javascript">
     //generate a random transaction ref
         function setupForm(){
-          var merchantCode = 'MX19294';
-          var payItemId = 'Default_Payable_MX19294';
+          var merchantCode = 'MX19329';
+          var payItemId = 'Default_Payable_MX19329';
           var redirectUri = 'https://qa.interswitchng.com/webpay/Demo/ResponsePage/?';
 
           document.getElementsByName('txn_ref')[0].value = randomReference();
@@ -61,19 +61,19 @@
                         <h6 class="my-0">Product name</h6>
                         <small class="text-muted">Brief description</small>
                     </div>
-                    <span class="text-muted">₦1000</span>
+                    <span class="text-muted">₦100</span>
                 </li>
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
                     <div>
                         <h6 class="my-0">Second product</h6>
                         <small class="text-muted">Brief description</small>
                     </div>
-                    <span class="text-muted">₦4000</span>
+                    <span class="text-muted">₦200</span>
                 </li>
 
                 <li class="list-group-item d-flex justify-content-between">
                     <span>Total (Naira)</span>
-                    <strong>₦5000</strong>
+                    <strong>₦300</strong>
                 </li>
             </ul>
             <div class="input-group">
@@ -91,7 +91,7 @@
             <form method='POST' action='https://qa.interswitchng.com/collections/w/pay'>
 
                 <!-- Hidden parameters containing interswitch merchant credentials -->
-                <input type="hidden"  name='amount' value="500000"/>
+                <input type="hidden"  name='amount' value="30000"/>
                 <input type="hidden"  name='currency' value="566"/>
                 <input type="hidden" name='txn_ref' id="tranRef"/>
                 <input type="hidden"  name='merchant_code'/>
